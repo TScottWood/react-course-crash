@@ -7,6 +7,7 @@ function Home() {
     async function fetchUsers() {
         const { data } = await axios.get("https://jsonplaceholder.typicode.com/users")
         setUsers(data)
+        console.log(data)
     }
 
     useEffect(() => {
@@ -15,13 +16,21 @@ function Home() {
         }, 2000);
   }, []);
 
+  const pixels = "1px";
+
   return ( 
     <div>
-        {users.length > 0
-            ? <h1>{users[0]?.name}</h1>
-            : <h1>Loading...</h1>
-}    
-    </div>
+        {users.map((user) => {
+            return (
+                <div key={user.id} style={{ border: `${pixels} solid black` }}>
+                    <div>{user?.id}</div>
+                    <div>{user?.name}</div>
+                    <div>{user?.email}</div>
+                    <div>{user?.username}</div>
+                </div>
+            );
+        })}
+    </div>  
   ); 
 }
 
