@@ -15,9 +15,7 @@ function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      fetchUsers();
-    }, 1000); // optional delay
+    fetchUsers();
   }, []);
 
   const pixels = "1px";
