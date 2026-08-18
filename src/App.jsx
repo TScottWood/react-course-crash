@@ -6,11 +6,13 @@ import Contact from "./pages/Contact";
 import Nav from "./components/Nav";
 import Users from "./pages/Users";
 import { startTransition } from "react";
-import Counter from "./components/Counter";
+import { useState } from "react";
 
 function App() {
   return (
-    <Counter />
+    <div>
+      <h1>React Hooks</h1>
+    </div>
   );
 }
 
