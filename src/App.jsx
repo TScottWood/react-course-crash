@@ -5,16 +5,12 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Nav from "./components/Nav";
 import Users from "./pages/Users";
+import { startTransition } from "react";
+import Counter from "./components/Counter";
 
 function App() {
   return (
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/users/:username" element={<Users />} />
-        </Routes>
-      </Router>
+    <Counter />
   );
 }
 
